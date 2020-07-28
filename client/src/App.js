@@ -27,7 +27,7 @@ class App extends React.Component {
     const {tasks} = this.state;
     this.setState({ tasks: tasks.filter(element => {return element.id !== task.id })});
 
-    if(source !== undefined) {
+    if(source) {
       this.socket.emit('removeTask', task);
     }
   }
